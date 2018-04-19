@@ -2,14 +2,14 @@
 # Contributor: Danial (bytn) Spruce <bit@teknik.io>
 
 pkgname=spacefm
-pkgver=1.0.5
-pkgrel=3
+pkgver=1.0.6
+pkgrel=1
 pkgdesc='Multi-panel tabbed file manager'
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="https://github.com/IgnorantGuru/spacefm"
 license=('GPL3')
 #install=$pkgname.install
-depends=('libwebp' 'shared-mime-info' 'hicolor-icon-theme' 'desktop-file-utils' 'udevil' 'ffmpegthumbnailer' 'gtk2')
+depends=('libwebp' 'shared-mime-info' 'hicolor-icon-theme' 'desktop-file-utils' 'udevil' 'ffmpegthumbnailer' 'gtk3')
 makedepends=('intltool' 'gettext')
 optdepends=('lsof: device processes'
             'eject: eject media'
@@ -28,7 +28,7 @@ prepare() {
 				 --sysconfdir=/etc \
 				 --enable-fast-install=no \
                  --disable-startup-notification \
-				 --with-gtk2 	
+				 --with-gtk3 	
 }
 
 build() {
